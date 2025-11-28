@@ -1,0 +1,23 @@
+:root {
+    --pj-size: 400px;
+    --pj-rotation-speed: 5s;
+}
+
+.personaje-parte {
+    position: absolute;
+    width: var(--pj-size);
+    height: var(--pj-size);
+}
+
+.pj-body {
+    animation: rotate var(--pj-rotation-speed) linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
