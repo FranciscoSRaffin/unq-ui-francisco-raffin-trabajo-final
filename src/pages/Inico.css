@@ -1,31 +1,3 @@
-.inicio-page {
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.background-scenario {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 70vw;
-  height: 100vh;
-  object-fit: cover;
-  object-position: top;
-  z-index: 1;
-}
-
-.content {
-  width: 70vw;
-  height: 100vh;
-  display: flex;
-  z-index: 2;
-  border: 1px solid red;
-}
 
 .title-svg {
   position: absolute;

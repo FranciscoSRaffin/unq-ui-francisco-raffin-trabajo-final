@@ -1,0 +1,80 @@
+.personaje-cerebro-container {
+  position: absolute;
+  left: 47%;
+  bottom: 42%;    
+  transform: translateX(-50%);
+}
+
+.difficulty-selection-container {
+  display: flex;
+  flex-direction: column;
+  /* Si, a mi tambien me duele ver esos margin, pero la imagen no es simetrica y el center lo deja desplazado */
+  margin-left: 33vh;
+  margin-top: 10vh;
+}
+
+.difficulty-title {
+  font-family: 'FugazOne', sans-serif;
+  font-size: 90px;
+  font-weight: 200;
+  color: #ffffff;
+  letter-spacing: 0.4rem;
+  filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.468));
+  text-shadow: 0 0 3 px rgba(255, 255, 255, 0.468);
+}
+
+.difficulty-button {
+ width: 6.5em;
+ height: 2.3em;
+ margin: 0.5em;
+ background: black;
+ color: white;
+ border: none;
+ border-radius: 0.625em;
+ font-size: 20px;
+ font-weight: bold;
+ cursor: pointer;
+ position: relative;
+ z-index: 1;
+ overflow: hidden;
+}
+
+.difficulty-button:hover {
+ color: black;
+}
+
+.difficulty-button:after {
+ content: "";
+ background: white;
+ position: absolute;
+ z-index: -1;
+ left: -20%;
+ right: -20%;
+ top: 0;
+ bottom: 0;
+ transform: skewX(-45deg) scale(0, 1);
+ transition: all 0.5s;
+}
+
+.difficulty-button:hover:after {
+ transform: skewX(-45deg) scale(1, 1);
+ -webkit-transition: all 0.5s;
+ transition: all 0.5s;
+}
+
+.difficulty-button-selected {
+ background: #a60e0e;
+}
+
+.difficulty-button-selected:after {
+ content: "";
+ background: #a60e0e;
+ position: absolute;
+ z-index: -1;
+ left: -20%;
+ right: -20%;
+ top: 0;
+ bottom: 0;
+ transform: skewX(-45deg) scale(0, 1);
+ transition: all 0.5s;
+}

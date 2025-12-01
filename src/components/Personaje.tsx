@@ -5,7 +5,7 @@ import './Personaje.css'
 
 function Personaje() {
     return (
-        <div className="personaje">
+        <div>
             <img className="personaje-parte" src={personajeExtremidades} />
             <img className="personaje-parte pj-body" src={personajeCuerpo} />
             <img className="personaje-parte" src={personajeCara} />
