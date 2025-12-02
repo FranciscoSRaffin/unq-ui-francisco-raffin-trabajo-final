@@ -78,3 +78,48 @@
  transform: skewX(-45deg) scale(0, 1);
  transition: all 0.5s;
 }
+
+.send-button {
+  opacity: 0.5;
+  cursor: default;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  width: 120px;
+  height: 120px;
+  border-radius: 100%;
+  transition: all 0.3s ease-in-out 0s;
+  background: linear-gradient(30deg, rgb(186, 165, 143) 20%, rgb(187, 110, 96) 80%);
+  box-shadow: rgba(193, 244, 246, 0.698) 0px 0px 0px 0px;
+  border: 0;
+}
+
+.send-button-enabled {
+    opacity: 1;
+    cursor: pointer;
+    animation: 1.2s cubic-bezier(0.8, 0, 0, 1) 0s infinite normal none running pulse;
+    background: linear-gradient(30deg, rgb(255, 130, 0) 20%, rgb(255, 38, 0) 80%);
+}
+
+.send-button-enabled:is(:hover, :focus) {
+  transform: scale(1.2);
+}
+
+@keyframes pulse {
+  100% {
+    box-shadow: 0 0 0 45px rgba(193,244,246,0);
+  }
+}
+
+.send-button-container {
+  display: flex;
+  justify-content: end;
+  margin-right: 12vh;
+  margin-top: 8vh;
+  align-items: center;
+  height: 100%;
+}
+  
+  
+  

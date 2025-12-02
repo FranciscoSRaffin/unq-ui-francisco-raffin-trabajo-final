@@ -1,4 +1,3 @@
-import './PersonajeCerebro.css'
 import difficultyBrainEasy from '../assets/difficulty_brain_easy.png'
 import difficultyBrainExtreme from '../assets/difficulty_brain_extreme.png'
 import difficultyBrainNormal from '../assets/difficulty_brain_normal.png'
