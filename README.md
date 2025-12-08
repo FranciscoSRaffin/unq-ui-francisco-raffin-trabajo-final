@@ -1,73 +1,61 @@
-# React + TypeScript + Vite
+# 🎮 Preguntados
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Un juego de preguntas y respuestas.
 
-Currently, two official plugins are available:
+## ✨ Características
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🎯 **4 Niveles de Dificultad**: Fácil, Normal, Difícil y Extremo
+- 🎨 **Interfaz Visual Atractiva**: Diseño moderno con animaciones y fondos temáticos
+- 📊 **Sistema de Puntuación**: Puntos basados en la dificultad seleccionada
 
-## React Compiler
+## 📦 Instalación
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+1. Clona el repositorio:
+```bash
+git clone <url-del-repositorio>
+cd unq-ui-francisco-raffin-trabajo-final
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+2. Instala las dependencias:
+```bash
+npm install
 ```
+
+3. Inicia el servidor de desarrollo:
+```bash
+npm start
+```
+
+4. Abre tu navegador en `http://localhost:5173`
+
+## 🎮 Uso
+
+1. **Pantalla de Inicio**: Haz clic en "COMENZAR" para iniciar el juego
+2. **Selección de Dificultad**: Elige entre Fácil, Normal, Difícil o Extremo
+3. **Jugar**: Responde las preguntas seleccionando una de las 4 opciones disponibles
+4. **Resultados**: Al finalizar, verás tu puntaje final y respuestas correctas
+
+### Flujo del Juego
+
+- Las preguntas se muestran una a la vez
+- Al seleccionar una respuesta, se muestra inmediatamente si es correcta (verde) o incorrecta (rojo)
+- Después de 1 segundo, la aplicación avanza automáticamente a la siguiente pregunta
+- Al completar todas las preguntas, se muestra la pantalla de resultados con opción para reiniciar
+
+## 🎯 Sistema de Puntuación
+
+El sistema de puntuación funciona de la siguiente manera:
+
+- **Respuesta Correcta**: 
+  - Fácil: +1 punto
+  - Normal: +2 puntos
+  - Difícil: +3 puntos
+  - Extremo: +4 puntos
+
+- **Respuesta Incorrecta**: 
+  - Se resta el 10% del multiplicador de dificultad
+  - Ejemplo: En modo Normal (-0.2 puntos), en modo Extremo (-0.4 puntos)
+
+- **Puntaje Mínimo**: El puntaje nunca puede ser menor a 0
+---
+
