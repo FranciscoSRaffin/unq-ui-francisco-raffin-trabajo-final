@@ -34,8 +34,8 @@ function DifficultySelector() {
             <div className="difficulty-selection-container">
               <span className="difficulty-title">DIFICULTAD</span>
               <div>
-                {isLoading ? <h1>Cargando...</h1> : difficulties.map((difficulty) => (
-                  <button className={difficulty === difficultySelected
+                {isLoading ? <h1>Cargando...</h1> : difficulties.map((difficulty, index) => (
+                  <button key={index} className={difficulty === difficultySelected
                     ? 'selection-buttom selection-buttom-selected'
                     : 'selection-buttom'
                   }

@@ -59,3 +59,4 @@ El sistema de puntuación funciona de la siguiente manera:
 - **Puntaje Mínimo**: El puntaje nunca puede ser menor a 0
 ---
 
+
