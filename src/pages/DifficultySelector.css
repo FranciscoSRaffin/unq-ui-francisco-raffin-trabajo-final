@@ -23,7 +23,7 @@
   text-shadow: 0 0 3 px rgba(255, 255, 255, 0.468);
 }
 
-.difficulty-button {
+.selection-buttom {
  width: 6.5em;
  height: 2.3em;
  margin: 0.5em;
@@ -39,11 +39,11 @@
  overflow: hidden;
 }
 
-.difficulty-button:hover {
+.selection-buttom:hover {
  color: black;
 }
 
-.difficulty-button:after {
+.selection-buttom:after {
  content: "";
  background: white;
  position: absolute;
@@ -56,17 +56,17 @@
  transition: all 0.5s;
 }
 
-.difficulty-button:hover:after {
+.selection-buttom:hover:after {
  transform: skewX(-45deg) scale(1, 1);
  -webkit-transition: all 0.5s;
  transition: all 0.5s;
 }
 
-.difficulty-button-selected {
+.selection-buttom-selected {
  background: #a60e0e;
 }
 
-.difficulty-button-selected:after {
+.selection-buttom-selected:after {
  content: "";
  background: #a60e0e;
  position: absolute;

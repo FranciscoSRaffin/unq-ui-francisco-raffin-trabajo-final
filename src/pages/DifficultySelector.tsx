@@ -36,8 +36,8 @@ function DifficultySelector() {
               <div>
                 {isLoading ? <h1>Cargando...</h1> : difficulties.map((difficulty) => (
                   <button className={difficulty === difficultySelected
-                    ? 'difficulty-button difficulty-button-selected'
-                    : 'difficulty-button'
+                    ? 'selection-buttom selection-buttom-selected'
+                    : 'selection-buttom'
                   }
                   onClick={() => setDifficultySelected(difficulty)}> {difficultiesTranslated[difficulty as keyof typeof difficultiesTranslated]} </button>
                 ))}
